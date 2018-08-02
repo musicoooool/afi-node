@@ -1,6 +1,6 @@
-import http from "axios";
-import qs from "qs";
-import state from '../store/state';
+let http = require("axios");
+let qs = require("qs");
+let state = require('../store/state');
 require('promise.prototype.finally').shim();
 // 使axios具有finally方法
 
@@ -16,7 +16,7 @@ let getType = data =>
     .toLowerCase();
 
 // 自动处理token更新，data 序列化等
-export let axios = async option => {
+module.exports.axios = async option => {
     let baseURL = option.baseURL ? option.baseURL : host;
     option = Object.assign(option, {
         method: option.method ? option.method : "get"

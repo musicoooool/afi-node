@@ -1,0 +1,38 @@
+{
+    "params": {
+        "sid": "1",
+        "nickname": "宾不厌诈",
+        "openid": "oW0w1v4qftC8xUP3q-MPIHtXB7hI",
+        "sex": "1",
+        "headimgurl": "http:\/\/wx.qlogo.cn\/mmhead\/Q3auHgzwzM7RSAYiaxiaC1lOZYicWic9YZKEFJ2TKEfh3pFJibLvf7IxdLQ\/0",
+        "county_id": "210502",
+        "vote_detail": ";0;;;;;;;;;;;1,0,2,3;0,1,2;;0;;;;0,1,2;0,1,2,3;;0;;;;;;0,1;;;;0,1,2;;;;;;;0,1,2,3",
+        "vote_result": "{\"right\":[12,1],\"error\":[15,13,19,20,22,28,32,39]}",
+        "score": "20",
+        "prize_id": 0,
+        "rec_date": "2018-08-01 22:55:17",
+        "time_used": "209",
+        "dom_content_loaded": "1013",
+        "loaded": "1508",
+        "wechat_version": "other",
+        "os_version": "iPhone OS 11.0",
+        "net_type": "other"
+    },
+    "tbl": "tbl_vote_main_I",
+    "sql": {
+        "do_lottery": "SELECT a.prize_num - a.lucky_user>=rand()*(a.people_num - a.all_user) prize_id FROM tbl_base_prize AS a WHERE a.id = 1",
+        "main": "insert into tbl_vote_main(sid,nickname,openid,sex,headimgurl,county_id,vote_detail,vote_result,score,prize_id,time_used,rec_date,dom_content_loaded,loaded,net_type,os_version,wechat_version) values ( '1','宾不厌诈','oW0w1v4qftC8xUP3q-MPIHtXB7hI','1','http:\/\/wx.qlogo.cn\/mmhead\/Q3auHgzwzM7RSAYiaxiaC1lOZYicWic9YZKEFJ2TKEfh3pFJibLvf7IxdLQ\/0','210502',';0;;;;;;;;;;;1,0,2,3;0,1,2;;0;;;;0,1,2;0,1,2,3;;0;;;;;;0,1;;;;0,1,2;;;;;;;0,1,2,3','{\"right\":[12,1],\"error\":[15,13,19,20,22,28,32,39]}','20','0','209','2018-08-01 22:55:17','1013','1508','other','iPhone OS 11.0','other' )"
+    },
+    "sqlUpdate": {
+        "question_detail": "update tbl_vote_question_list set right_num=right_num+(case when qid in (12,1) then 1 else 0 end),error_num=error_num+(case when qid in (15,13,19,20,22,28,32,39) then 1 else 0 end)",
+        "question_count": "update tbl_vote_question_count set vote_count=vote_count+1 where ( qid=1 and aid in (0 ) ) or ( qid=12 and aid in (1,0,2,3 ) ) or ( qid=13 and aid in (0,1,2 ) ) or ( qid=15 and aid in (0 ) ) or ( qid=19 and aid in (0,1,2 ) ) or ( qid=20 and aid in (0,1,2,3 ) ) or ( qid=22 and aid in (0 ) ) or ( qid=28 and aid in (0,1 ) ) or ( qid=32 and aid in (0,1,2 ) ) or ( qid=39 and aid in (0,1,2,3 ) )",
+        "people_islucky": "update tbl_base_prize set all_user=all_user+1,lucky_user=lucky_user+0",
+        "vote_count": "update tbl_vote_count set people_sum=people_sum+1 and people_passed=people_passed+0 where county_id=210502",
+        "track_data": "update tbl_vote_track_data set data_count=data_count+1 where (data_type='sex' and data_value='男') or  (data_type='os' and data_value='unknown') or (data_type='score' and data_value=20) or (data_type='net_type' and data_value='other') or (data_type='weichat_version' and data_value='other' )  or (data_type='answer_minutes' and data_value='4' )  or (data_type='dom_loaded' and data_value='2' ) "
+    },
+    "data": [{
+        "id": 3,
+        "affected_rows": 1,
+        "prize_id": 0
+    }]
+}
