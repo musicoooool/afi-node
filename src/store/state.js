@@ -18,9 +18,9 @@ const state = {
         questionNum: 10, //共选择题目数
         scoreDoLottery: 80, //多少分以上抽奖
     },
-    cdnUrl: '//api.cbpc.ltd/',
+    cdnUrl: 'https://api.cbpc.ltd/',
     wxUrl: '//wx.cbpc.ltd/',
-    sportUrl: '//www.cbpc.ltd/public/topic/201809/',
+    sportUrl: 'https://www.cbpc.ltd/public/topic/201809/',
     _KEY: {
         weixin: 'wx_userinfo', //微信身份信息
         county: 'user_county', //县级位置
