@@ -9,12 +9,12 @@ let doExam = async() => {
 
     // 1.微信签名
     let signature = await wx.signature(url);
-    dump('1.开始签名');
-    dump(signature);
+    // dump('1.开始签名');
+    // dump(signature);
     // 2.记录链接值
     let readNum = await db.addCommonVisitCount(url);
-    dump('2.阅读数记录');
-    dump(readNum);
+    // dump('2.阅读数记录');
+    // dump(readNum);
 
     // 获取投票数据
     let params = getParams();
@@ -23,7 +23,7 @@ let doExam = async() => {
     // 3.投票
     let voteInfo = await db.submitPaper(params);
 
-    dump('3.投票结果：');
+    // dump('3.投票结果：');
     // 中奖信息在voteIno中，无需加载
     // 中奖用户需要增加一次添加中奖信息的逻辑，此机率为1/100，可忽略
 
