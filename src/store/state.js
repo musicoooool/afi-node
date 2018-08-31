@@ -19,7 +19,7 @@ const state = {
         scoreDoLottery: 80, //多少分以上抽奖
     },
     cdnUrl: 'https://api.cbpc.ltd/',
-    wxUrl: '//wx.cbpc.ltd/',
+    wxUrl: 'https://api.cbpc.ltd',
     sportUrl: 'https://www.cbpc.ltd/public/topic/201809/',
     _KEY: {
         weixin: 'wx_userinfo', //微信身份信息
