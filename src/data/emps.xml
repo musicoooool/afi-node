@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF8"?>
+<DBSET>
+  <VER>123123</VER>
+  <ROW>
+    <ORG_CODE>1</ORG_CODE>
+    <NAME>A</NAME>
+  </ROW>
+  <STATUS>0</STATUS>
+  <ERR_MSG/>
+</DBSET>
